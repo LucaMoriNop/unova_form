@@ -235,6 +235,7 @@ module UnovaForm
                 name: name || id,
                 class: input_class,
                 checked: o[:selected] || (multiple ? value&.include?(o[:value]) : o[:value] == value),
+                required:,
                 title: (placeholder || name || cid if o[:label].empty?),
                 disabled: o[:disabled] || disabled,
                 **_options
